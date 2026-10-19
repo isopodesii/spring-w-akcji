@@ -1,0 +1,38 @@
+#spring:
+#  security:
+#    user:
+#      name: buzz
+#      password: infinity
+
+taco:
+  orders:
+    pageSize: 10
+
+
+  discount:
+    codes:
+      abcdef: 10
+
+---
+spring:
+  jms:
+    template:
+      default-destination: tacocloud.order.queue
+  profiles: prod
+
+  datasource:
+    url: jdbc:mysql://localhost/tacocloud
+    username: tacouser
+    password: tacopassword
+
+logging:
+  level:
+    tacos: WARN
+
+tacocloud:
+  email:
+    host: imap.tacocloud.com
+    mailbox: INBOX
+    username: taco-in-flow
+    password: 1LOv3T4c0s
+    poll-rate: 10000
