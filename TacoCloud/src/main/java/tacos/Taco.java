@@ -7,12 +7,10 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.data.annotation.Id;
 
 
 @Data
-@RestResource(rel = "tacos", path = "tacos")
 @Document
 public class Taco {
 
